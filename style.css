@@ -1,0 +1,131 @@
+
+
+html,
+button {
+  font-family: 'Annie Use Your Telescope', cursive;
+}
+
+body {
+  margin: 0;
+}
+
+.header,
+main,
+.footer {
+  width: 300px;
+  margin: 0 auto;
+  transition: width 250ms;
+}
+
+.header,
+.footer {
+  padding: 15px 0;
+  box-sizing: border-box;
+}
+
+.main-heading {
+  margin: 0;
+  font-size: 40px;
+  text-align: center;
+  color: #e4528c;
+}
+
+.cards-container {
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  transition: width 250ms;
+}
+
+.card {
+  width: 25%;
+  height: 25%;
+  border: 1px solid black;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-image: url("img/AnimeMatching.png");
+  background-size: cover;
+  transition: transform 450ms, box-shadow 250ms;
+}
+
+.card:hover {
+  box-shadow: inset 0px 0px 10px #e4528c;
+}
+
+img {
+  width: 100%;
+  opacity: 0;
+  transition: opacity 150ms;
+  cursor: pointer;
+  height: -webkit-fill-available;
+  background-color: white;
+}
+
+.footer {
+  display: flex;
+}
+
+.score-area,
+.button-area {
+  width: 50%;
+}
+
+.display-score,
+.display-bestscore,
+.reset-button {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.score-value,
+.bestscore-value {
+  color: #e4528c;
+}
+
+.reset-button {
+  padding: 5px 25px;
+  background-color: #e4528c;
+  color: #fefefe;
+  letter-spacing: 2px;
+  border: 1px solid black;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.reset-button:hover {
+  box-shadow: inset 0px 0px 10px #5f58aa;
+}
+
+.hint {
+  display: block;
+}
+
+/* ======================================================= */
+/* Breakpoints */
+/* ======================================================= */
+
+@media ( min-width: 576px ) {
+  .header,
+  main,
+  .footer {
+    width: 500px;
+  }
+
+  .cards-container {
+    height: 500px;
+  }
+}
+
+/* Animations / Transitions */
+.hide-bg-card {
+  background-image: url("");
+}
+
+.show-image {
+  opacity: 1;
+}
+
+.rotate-card {
+  transform: rotateY(180deg);
+}
